@@ -22,7 +22,7 @@
         vertical-align: bottom; }
     .flexbin.flexbin-margin {
       margin: 2.5px; }
-    @media (max-width: 768px) {
+    @media (max-width: 875px) {
       .flexbin {
         display: flex;
         overflow: hidden;
@@ -36,18 +36,18 @@
         .flexbin > * {
           position: relative;
           display: block;
-          height: 150px;
+          height: 250px;
           margin: 2.5px;
           flex-grow: 1; }
           .flexbin > * > img {
-            height: 150px;
+            height: 250px;
             object-fit: cover;
             max-width: 100%;
             min-width: 100%;
             vertical-align: bottom; }
         .flexbin.flexbin-margin {
           margin: 2.5px; } }
-    @media (max-width: 400px) {
+    @media (max-width: 563px) {
       .flexbin {
         display: flex;
         overflow: hidden;
@@ -61,11 +61,11 @@
         .flexbin > * {
           position: relative;
           display: block;
-          height: 100px;
+          height: 150px;
           margin: 2.5px;
           flex-grow: 1; }
           .flexbin > * > img {
-            height: 100px;
+            height: 150px;
             object-fit: cover;
             max-width: 100%;
             min-width: 100%;
