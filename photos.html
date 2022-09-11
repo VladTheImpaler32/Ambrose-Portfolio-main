@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="main1.css" media="screen" /> <link rel="stylesheet" href="mobile1.css" media="screen and (max-device-width: 800px)" />
  <media="screen and (max-device-width: 800px)" />
 <meta name="description" content="hi">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<link href="flexbin.css" type="text/css" rel="stylesheet" media="all" />
 </head>
 
 <style>
@@ -83,6 +83,39 @@
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+  justify-content: center;
+}
+  
+.column {
+	flex: 24%;
+	max-width: 24%;
+	padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+}
+  
+@media screen and (max-width: 830px) {
+  .column {
+	  flex: 48%;
+	  max-width: 48%;
+	}
+}
+  
+@media screen and (max-width: 600px) {
+	.column {
+	  flex: 100%;
+	  max-width: 100%;
+	}
 }
 
 @media only screen and (max-width: 700px) {
