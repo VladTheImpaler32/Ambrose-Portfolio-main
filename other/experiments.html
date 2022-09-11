@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="main1.css" media="screen" /> <link rel="stylesheet" href="mobile1.css" media="screen and (max-device-width: 800px)" />
  <media="screen and (max-device-width: 800px)" />
 <meta name="description" content="other">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
 
 <style>
 #div
@@ -21,6 +22,15 @@
   display: flex;
   text-align: center;
   transform: translateY(50%);
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+    margin: 0 auto;
+	}
 }
 </style>
 </HEAD>
