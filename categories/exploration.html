@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<head>
+<TITLE>ambrose allison</TITLE>
+<link rel="stylesheet" href="main1.css" media="screen" /> <link rel="stylesheet" href="mobile1.css" media="screen and (max-device-width: 800px)" />
+ <media="screen and (max-device-width: 800px)" />
+<meta name="description" content="hi">
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<style>
+#myImg {
+  border-radius: 0px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  top: 50%;
+  width: auto;
+  max-width: 95%;
+  max-height: 90%;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align:;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.5s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+  justify-content: center;
+}
+  
+.column {
+	flex: 24%;
+	max-width: 24%;
+	padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+}
+  
+@media screen and (max-width: 830px) {
+  .column {
+	  flex: 48%;
+	  max-width: 48%;
+	}
+}
+  
+@media screen and (max-width: 600px) {
+	.column {
+	  flex: 100%;
+	  max-width: 100%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 95%;
+    margin: auto;
+    display: block;
+    top: 50%;
+    max-height:90%;
+  }
+}
+</style>
+
+<body bgcolor="black">
+<script>$('img').on('dragstart', function(event) { event.preventDefault(); });
+$("body").on("contextmenu", "img", function(e) {
+  return false;
+});
+</script>
+
+<div class="row">
+  <div class="column">
+    <div><img src="images/IMG_2253.jpg" style="width:100%;" id="myImg" class="myImages"></div>
+    <div><img src="images/IMG_0600.jpg" style="width:100%;" id="myImg" class="myImages"></div>
+    <div><img src="images/IMG_2167.jpg" style="width:100%;" id="myImg" class="myImages"></div>
+  </div>
+  <div class="column">
+    <div><img src="images/IMG_1970-HDR.jpg" style="width:100%;" id="myImg" class="myImages"></div>
+    <div><img src="images/IMG_2184.jpg" style="width:100%;" id="myImg" class="myImages"></div>
+    <div><img src="images/IMG_7800.jpg" style="width:100%;" id="myImg" class="myImages"></div>
+  </div>
+  <div class="column">
+    <div><img src="images/IMG_2356.jpg" style="width:100%;" id="myImg" class="myImages"></div>
+    <div><img src="images/IMG_1533.jpg" style="width:100%;" id="myImg" class="myImages"></div>
+    <div><img src="images/IMG_0565.jpg" style="width:100%;" id="myImg" class="myImages"></div>
+  </div>
+  <div class="column">
+    <div><img src="images/IMG_1536.jpg" style="width:100%;" id="myImg" class="myImages"></div>
+    <div><img src="images/IMG_0634-Edit.jpg" style="width:100%;" id="myImg" class="myImages"></div>
+    <div><img src="images/IMG_3606.jpg" style="width:100%;" id="myImg" class="myImages"></div>
+    <div><img src="images/IMG_0644-Edit.jpg" style="width:100%;" id="myImg" class="myImages"></div>
+    <div><img src="images/IMG_2255.jpg" style="width:100%;" id="myImg" class="myImages" alt="&quotKill Your Friends&quot"></div>
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+	
+<script>
+var modal = document.getElementById('myModal');
+var images = document.getElementsByClassName('myImages');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script> 
+</body>
