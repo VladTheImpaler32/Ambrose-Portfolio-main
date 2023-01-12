@@ -1,6 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+
 .text {
     font-size: 36px;
 }
+
+body {
+    background-color: black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+margin: 0px;
+color: white;
+font-size: 48px;
+font-family: 'Domine', serif;
+}
+
 #myImg {
 border-radius: 0px;
 cursor: pointer;
@@ -96,38 +115,40 @@ cursor: pointer;
     width: 100%;
 }
 
-@media screen and (max-width: 1240px) {
+.wrapper {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.innerwrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1230px) {
     .column {
-        flex: 29%;
-        max-width: 29%;
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .column img {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 }
 
-@media screen and (max-width: 830px) {
+@media (max-width: 1030px) {
     .column {
         flex: 48%;
         max-width: 48%;
-        padding: 0 4px;
+        padding: 0 5px;
     }
 
     .column img {
-        margin-top: 8px;
+        margin-top: 10px;
     }
 }
 
-@media screen and (max-width: 600px) {
-    .column {
-        flex: 100%;
-        max-width: 100%;
-    }
-}
-
-@media only screen and (max-width: 700px) {
+@media (max-width: 900px) {
     .modal-content {
         width: 95%;
         margin: auto;
@@ -136,3 +157,22 @@ cursor: pointer;
         max-height:90%;
     }
 }
+
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    h1 {
+        margin: 0px;
+        color: white;
+        font-size: 38px;
+    }
+    font {
+        font-size: 28px;
+    }
+    .text {
+        font-size: 26px;
+    }
+}
+

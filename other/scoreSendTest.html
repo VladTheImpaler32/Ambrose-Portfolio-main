@@ -8,69 +8,32 @@
 </head>
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <form method="post" name="form"> 
+    <form method="post" name="form" action="https://www.ambroseallison.com/other/leaderboard.php"> 
         <input type="text"  value="ambrose" name="userName" id="userName">
         <input type="number"  value="68" name="score" id="score">
+        <input type="number"  value="1" name="type" id="type">
         <input type="button" value="ajax POST" onclick="{send();}">
         <input type="submit" name="submit" value="form POST" id="submit">
     </form><br><br>
 
-    <table>
-        <tr>
-            <td>Ranking</td>
-            <td>UserName</td>
-            <td>Score</td>
-        </tr>
-            <td>ambrose</td>
-            <td>105</td></tr><tr><td>2</td>
-            <td>Test User</td>
-            <td>100</td></tr><tr><td>3</td>
-            <td>caleb</td>
-            <td>89</td></tr><tr><td>4</td>
-            <td>nathen</td>
-            <td>72</td></tr><tr><td>5</td>
-            <td>saul</td>
-            <td>69</td></tr><tr><td>6</td>
-            <td>saul</td>
-            <td>69</td></tr><tr><td>7</td>
-            <td>saul</td>
-            <td>69</td></tr><tr><td>8</td>
-            <td>josh</td>
-            <td>68</td></tr><tr><td>9</td>
-            <td>josh</td>
-            <td>68</td></tr><tr><td>10</td>
-            <td>owen</td>
-            <td>55</td></tr>
-</table>
-
     <div id="div"></div>
     <script>
-
-        function load() {
-
-        }
 
         function send() {
             let userName = document.getElementById('userName').value;
             let score = document.getElementById('score').value;
-            $(document).ready(function(){
-                $('form').submit(function(event){
-                    event.preventDefault();
+            let type = document.getElementById('type').value;
+            sendData = {userName, score, type};
 
-                    sendData = {userName, score};
-
-                    $.ajax({
-                            type        : 'POST', 
-                            url         : 'https://www.ambroseallison.com/other/leaderboard.php', 
-                            data        : sendData, 
-                            success: function( response ) {
-                                console.log( response );
-                            }
-                    });
+                $.ajax({
+                        type        : 'POST', 
+                        url         : 'https://www.ambroseallison.com/other/leaderboard.php', 
+                        data        : sendData, 
+                        success: function( response ) {
+                            console.log( response );
+                        }
                 });
-            });
-
-        }
+            };
     </script>
 </body>
 </html>

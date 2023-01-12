@@ -1,19 +1,157 @@
 <head>
 <TITLE>ambrose allison</TITLE>
-<link rel="stylesheet" href="main1.css" media="screen" /> <link rel="stylesheet" href="mobile1.css" media="screen and (max-device-width: 800px)" />
- <media="screen and (max-device-width: 800px)" />
+<link rel="stylesheet" href="main1.css" media="screen" />
 <meta name="description" content="hi">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>about</title>
+  <style> @import url('https://fonts.googleapis.com/css2?family=Domine&display=swap'); </style>
   <style>
-    body {
-    font-family: 'Times New Roman', serif;
+  p, a{
+    color: white;
+    font-size: 4vw;
+    font-family: 'Domine', serif;
+    margin: 0rem;
+    text-transform: lowercase;
   }
+  .text2 {
+    width: 35vw;
+    margin: 0 auto;
+    margin-top: 10vh;
+  }
+  .text2:has(.fancy:hover) .word:not(.fancy:hover) {
+    opacity: 0.2;
+    transition: opacity 0.2s ease;
+  } 
+  .line {
+    display: flex;
+    justify-content: space-between;
+  }
+  a {
+    text-decoration: none;  
+  }
+  .fancy span {
+    display: inline-block;
+  }
+  .fancy > .outer {
+    transition: transform 350ms ease;
+  }
+  .fancy:hover > .outer {
+    transition: 800ms;
+  }
+  .fancy:hover > .outer > .inner > .letter {
+    animation: bounce 5s ease infinite;
+  }
+  .fancy:hover > .outer:nth-child(1) {
+    transform: translate(-80%, 30%) rotate(8deg);
+    color: #833AB4;
+  }
+  .fancy:hover > .outer:nth-child(2) {
+    transform: translate(-70%, -40%) rotate(12deg);
+    color: #C13584
+  }
+  .fancy:hover > .outer:nth-child(3) {
+    transform: translate(-40%, 25%) rotate(-20deg);
+    color: #E1306C
+  }
+  .fancy:hover > .outer:nth-child(4) {
+    transform: translate(-30%, -30%) rotate(-10deg);
+    color: #FD1D1D
+  }
+  .fancy:hover > .outer:nth-child(5) {
+    transform: translate(-10%, -20%) rotate(15deg);
+    color: #FD1D1D
+  }
+  .fancy:hover > .outer:nth-child(6) {
+    transform: translate(20%, 20%) rotate(-8deg);
+    color: #F56040
+  }
+  .fancy:hover > .outer:nth-child(7) {
+    transform: translate(40%, -20%) rotate(-15deg);
+    color: #F77737
+  }
+  .fancy:hover > .outer:nth-child(8) {
+    transform: translate(60%, 20%) rotate(10deg);
+    color: #F77737
+  }
+  .fancy:hover > .outer:nth-child(9) {
+    transform: translate(200%, -20%) rotate(0deg);
+    color: #FCAF45
+  }
+  .fancy:hover > .outer:nth-child(10) {
+    transform: translate(130%, -30%) rotate(10deg);
+    color: #FCAF45
+  }
+  .fancy:hover > .outer:nth-child(11) {
+    transform: translate(110%, 0%) rotate(8deg);
+    color: #FFDC80
+  }
+  @media (max-width: 1200px) {
+    .text2 {
+      width: 80vw;
+      margin-top: 20vh;
+    }
+    p, a{
+      font-size: 8vw;
+    }
+  }
+  @keyframes bounce {
+  from, to {transform: translateY(-0%);}
+  50% {transform: translateY(-5%);}
+}
   </style>
 </head>
-<meta name="viewport" content="width=device-width, initial-scale=0.7,"/>
 
-<body bgcolor="black">
-  <p style="font-size:64px"><font color=#870058>ab</font><font color=#A4303F>o</font><font color=#F2D0A4>ut&nbsp</font></p>
-  <p style="font-size:32px">&nbsp&nbsp&nbsp&nbsp&nbsp<span style="color:#787878">don't know how i got here, but here i am</span></p>
+<body>
+  <div class="wrapper">
+    <img src="../../photos/images/logo/001.png" style="width:128px;">
+    <h1><a href="https://ambroseallison.com/">ambrose allison</a></h1>
+    <div class="innerwrapper">
+    <A HREF="../../photos"style="text-decoration:none;" class="text"><font color=#4A5899>gal</font><font color=#41B7E1>le</font><font color="ABD2FA">ries</font></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <A HREF="../../about.html"style="text-decoration:none;" class="text"><font color=#427653>ab</font><font color=#7CB68F>out</font></A>
+    </div>
+  </div>
 
+  <div class="text2">
+    <div class="line">
+      <p class="word">ambrose</p>
+      <p class="word">allison</p>
+    </div>
+    <div class="line">
+      <p class="word">photography</p>
+    </div>
+    <div class="line">
+      <p class="word">british</p>
+      <p class="word">columbia</p>
+    </div>
+    <div class="line">
+      <a id="username" href="https://www.instagram.com/ambrose.a_/" target="_blank" class="word fancy">@ambrose.a_</a>
+    </div>
+  </div>
+<script>
+const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+const enhance = id => {
+  const element = document.getElementById(id),
+        text = element.innerText.split("");
+  
+  element.innerText = "";
+  
+  text.forEach((value, index) => {
+    const outer = document.createElement("span");
+    outer.className = "outer";
+    const inner = document.createElement("span");
+    inner.className = "inner";
+    inner.style.animationDelay = `${rand(-5000, 0)}ms`;
+    const letter = document.createElement("span");
+    letter.className = "letter";
+    letter.innerText = value;
+    letter.style.animationDelay = `${rand(-5000, 0)}ms`;
+    inner.appendChild(letter);    
+    outer.appendChild(inner);    
+    element.appendChild(outer);
+  });
+}
+
+  enhance("username");
+</script>
 </body>

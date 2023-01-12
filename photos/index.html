@@ -1,110 +1,142 @@
 <!DOCTYPE html>
 <head>
 <TITLE>ambrose allison</TITLE>
-<link rel="stylesheet" href="../main1.css" media="screen" /> <link rel="stylesheet" href="mobile1.css" media="screen and (max-device-width: 800px)" />
- <media="screen and (max-device-width: 800px)" />
+<link rel="stylesheet" href="../main1.css" media="screen" />
 <meta name="description" content="hi">
 <meta content="width=device-width, initial-scale=1" name="viewport" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+<style> @import url('https://fonts.googleapis.com/css2?family=Domine&display=swap'); </style>
 <style>
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
+@import url('https://fonts.googleapis.com/css2?family=Domine&display=swap');
+.container {
+  display: flex;
   padding: 10px;
   height: 90vh;
+  flex-direction: column;
 }
-.grid-item {
+.item {
+  display: flex;
+  justify-content: center;
   padding: 20px;
   font-size: 64px;
   text-align: center;
 }
+.backimg {
+  width: 50vw;
+}
 
 @media screen and (max-width: 600px) {
-  .grid-container {
-    display: block;
-    grid-template-columns: auto auto auto;
+  .container {
+    display: flex;
     padding: 10px;
     height: 90vh;
+    flex-direction: column;
   }
-
-  .grid-item {
+  .item {
+    display: flex;
+    justify-content: center;
     padding: 20px;
-    font-size: 48px;
+    font-size: 36px;
     text-align: center;
   }
+  .backimg {
+    width: 80vw;
+  }
 }
-  img {
-    width: 200px;
-    height: 100px;
-  }
-  .backimg1 {
-    overflow: auto;
-    position: relative;
-  }
-  .backimg1::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    background-image: url(categories/images/IMG_0844.webp);
-    background-size:cover;
-    background-position: center;
-    height: 100%;
-    filter: blur(2px);
-    border-radius: 2%;
-  }
-  .backimg2 {
-    overflow: auto;
-    position: relative;
-  }
-  .backimg2::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    background-image: url(categories/images/IMG_3970-Edit.webp);
-    background-size:cover;
-    background-position: center;
-    height: 100%;
-    filter: blur(2px);
-    border-radius: 2%;
-  }
-  .backimg3 {
-    overflow: auto;
-    position: relative;
-  }
-  .backimg3::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    background-image:url(categories/images/IMG_2184.webp);
-    background-size:cover;
-    background-position: center;
-    height: 100%;
-    filter: blur(2px);
-    border-radius: 2%;
-  }
-  a {
-    z-index: 10;
-  }
+.backimg1 {
+  overflow: auto;
+  position: relative;
+}
+.backimg1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-image: url(images/webp_small/IMG_0844.webp);
+  background-size:cover;
+  background-position: center;
+  height: 100%;
+  filter: blur(2px);
+  border-radius: 2%;
+}
+.backimg2 {
+  overflow: auto;
+  position: relative;
+}
+.backimg2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-image: url(images/webp_small/IMG_3970-Edit.webp);
+  background-size:cover;
+  background-position: center;
+  height: 100%;
+  filter: blur(2px);
+  border-radius: 2%;
+}
+.backimg3 {
+  overflow: auto;
+  position: relative;
+}
+.backimg3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-image:url(images/webp_small/IMG_2184.webp);
+  background-size:cover;
+  background-position: center;
+  height: 100%;
+  filter: blur(2px);
+  border-radius: 2%;
+}
+.backimg4 {
+  overflow: auto;
+  position: relative;
+}
+.backimg4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-image:url(images/webp_small/IMG_9801-Edit.webp);
+  background-size:cover;
+  background-position: center;
+  height: 100%;
+  filter: blur(2px);
+  border-radius: 2%;
+}
+a {
+  text-decoration: none;
+  z-index: 10;
+  font-family: 'Domine', serif;
+  color: white;
+}
 </style>
 </head>
 
-<body style="background-color:black">
-<font style="font-family:times;font-size:64px;">
+<body>
 
-<div class="grid-container">
-  <div class="grid-item" id="1"><br><div class="backimg1"><br><a href="categories/beach"style="text-decoration:none;"><font color=#ffffff>beach</font></a><br><br></div></div>
-  <div class="grid-item" id="2"><br><div class="backimg2"><br><a href="categories/astro"style="text-decoration:none;"><font color=#E83151>astro</font><font color=#757780>photography</font></a><br><br></div></div>
-  <div class="grid-item" id="3"><br><div class="backimg3"><br><a href="categories/exploration"style="text-decoration:none;"><font color=#ffffff>explor</font><font color=#ffffff>ation</font></a><br><br></div></div>
-  <div class="grid-item">4</div>
-  <!-- <div class="grid-item"><br><br><a href="categories/unsorted"style="text-decoration:none;"><font color=#3DDC97>un</font><font color=#46237A>sorted</font></a></div> -->
-  <div class="grid-item"><br><br><a href="categories/all"style="text-decoration:none;"><font color=#26547C>a</font><font color=#06D6A0>ll</font></a></div>
-  <div class="grid-item">6</div>
+<div class="wrapper">
+  <img src="../photos/images/logo/001.png" style="width:128px;">
+  <h1><a href="https://ambroseallison.com/">ambrose allison</a></h1>
+  <div class="innerwrapper">
+  <A HREF="../photos" class="text"><font color=#4A5899>gal</font><font color=#41B7E1>le</font><font color="ABD2FA">ries</font></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <A HREF="../about.html" class="text"><font color=#427653>ab</font><font color=#7CB68F>out</font></A>
+  </div>
+</div>
+
+<div class="container">
+  <div class="item" id="1"><br><div class="backimg1 backimg"><br><a href="beach">beach</a><br><br></div></div>
+  <div class="item" id="2"><br><div class="backimg2 backimg"><br><a href="astro">astrophotography</a><br><br></div></div>
+  <div class="item" id="3"><br><div class="backimg3 backimg"><br><a href="exploration">exploration</a><br><br></div></div>
+  <div class="item"><br><div class="backimg4 backimg"><br><a href="all">all</a><br><br></div></div>
 </div>
 
 
